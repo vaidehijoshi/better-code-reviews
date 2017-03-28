@@ -1,5 +1,5 @@
 body {
-  background-color: #fbc547;
+  background-color: #ffffff;
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
@@ -14,7 +14,7 @@ a {
 
   &:focus,
   &:hover {
-    color: rgba(#000, 0.6);
+    color: #fbc547;
   }
 }
 
@@ -28,6 +28,11 @@ a {
   color: #47525c;
 }
 
+.section-header {
+  font-family: Helvetica;
+  color: #fbc547;
+}
+
 .typeform-flex-container {
   display: -webkit-flex;
   display: flex;
@@ -37,4 +42,8 @@ a {
   .typeform-item {
     padding-top: 20px;
   }
+}
+
+.footer {
+  padding-top: 50px;
 }
