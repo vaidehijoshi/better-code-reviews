@@ -1,0 +1,42 @@
+{
+  "rules": {
+    "curly": 2,
+    "dot-location": [2, "property"],
+    "dot-notation": 2,
+    "eqeqeq": [2, "smart"],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "linebreak-style": [2, "unix"],
+    "max-len": [1, 80, 2],
+    "no-else-return": 1,
+    "no-extend-native": [2, {"exceptions": ["Array", "Function"]}],
+    "no-floating-decimal": 2,
+    "no-implicit-coercion": 2,
+    "no-lonely-if": 2,
+    "no-loop-func": 2,
+    "no-magic-numbers": [1, {"enforceConst": true}],
+    "no-native-reassign": 2,
+    "no-spaced-func": 2,
+    "no-unneeded-ternary": 2,
+    "object-curly-spacing": [2, "always"],
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "space-before-function-paren": [2, "never"],
+    "space-in-parens": [2, "never"]
+  },
+  "env": { "browser": true },
+  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "jsx": true,
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "React": true,
+    "BR": true,
+    "classNames": true,
+    "_": true,
+    "$": true
+  }
+}
