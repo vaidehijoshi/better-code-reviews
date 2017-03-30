@@ -26,6 +26,25 @@ a {
 .main-header {
   font-family: Helvetica;
   color: #47525c;
+  padding-bottom: 40px;
+}
+
+.header-description {
+  font-family: Helvetica;
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  color: #47525c;
+}
+
+.header-subtitle {
+  font-family: Helvetica;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fbc547;
+  font-size: 1.4rem;
+  padding: 45px 0 45px 0;
 }
 
 .section-header {
