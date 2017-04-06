@@ -18,9 +18,12 @@ a {
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+@media screen and (max-width: 950px) {
+  .container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
 }
 
 .main-header {
@@ -31,7 +34,7 @@ a {
 
 .header-description {
   font-family: Helvetica;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
   text-align: left;
   color: #47525c;
@@ -39,7 +42,7 @@ a {
 
 .header-subtitle {
   font-family: Helvetica;
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
   color: #fbc547;
@@ -50,6 +53,10 @@ a {
 .section-header {
   font-family: Helvetica;
   color: #fbc547;
+}
+
+.chart {
+  margin: 0 auto;
 }
 
 .typeform-flex-container {
