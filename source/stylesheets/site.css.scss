@@ -50,6 +50,18 @@ a {
   padding: 45px 0 45px 0;
 }
 
+.content-container {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+
+  // for iOS 8
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  //
+}
+
 .section-header {
   font-family: Helvetica;
   color: #fbc547;

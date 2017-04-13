@@ -1,0 +1,16 @@
+{
+  "name": "highcharts",
+  "version": "5.0.10",
+  "main": "highcharts.js",
+  "homepage": "https://github.com/highcharts/highcharts-dist",
+  "_release": "5.0.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.10",
+    "commit": "a36ba776c9bb7b590f602edffcf81f44d34e743d"
+  },
+  "_source": "https://github.com/highcharts/highcharts-dist.git",
+  "_target": "^5.0.10",
+  "_originalSource": "highcharts",
+  "_direct": true
+}
