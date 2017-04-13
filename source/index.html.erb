@@ -3,10 +3,7 @@ title: Better Code Reviews
 ---
 
 <div class="container">
-  <%= 
-    browser = Octicons::Octicon.new("code", { :height => 100, :fill => '#fbc547' })
-    browser.to_svg
-  %>
+  <%= partial(:octicon, :locals => { :octicon_name => "code", :color => "#fbc547", height: 100 }) %>
 
   <h1 class="main-header">Better Code Reviews</h1>
   <p class="header-description">
@@ -20,55 +17,37 @@ title: Better Code Reviews
 
   <div class="content-container" style="display: flex; flex-direction: column;">
     <h2 class="section-header"> 
-      <%= 
-        browser = Octicons::Octicon.new("sync", { :height => 22, :fill => '#fbc547' })
-        browser.to_svg
-      %>
+      <%= partial(:octicon, :locals => { :octicon_name => "sync", :color => "#fbc547", :height => 22 }) %>
       
       Feedback
     </h2>
 
     <h2 class="section-header">
-      <%= 
-        browser = Octicons::Octicon.new("hubot", { :height => 22, :fill => '#fbc547' })
-        browser.to_svg
-      %>
+      <%= partial(:octicon, :locals => { :octicon_name => "hubot", :color => "#fbc547", :height => 22 }) %>
       
       Everyone
     </h2>
 
     <h2 class="section-header">
-      <%= 
-        browser = Octicons::Octicon.new("comment-discussion", { :height => 22, :fill => '#fbc547' })
-        browser.to_svg
-      %>
+      <%= partial(:octicon, :locals => { :octicon_name => "comment-discussion", :color => "#fbc547", :height => 22 }) %>
       
       Comments
     </h2>
 
     <h2 class="section-header">
-      <%= 
-        browser = Octicons::Octicon.new("law", { :height => 22, :fill => '#fbc547' })
-        browser.to_svg
-      %>
+      <%= partial(:octicon, :locals => { :octicon_name => "law", :color => "#fbc547", :height => 22 }) %>
 
       Ego
     </h2>
 
     <h2 class="section-header">
-      <%= 
-        browser = Octicons::Octicon.new("heart", { :height => 22, :fill => '#fbc547' })
-        browser.to_svg
-      %>
+      <%= partial(:octicon, :locals => { :octicon_name => "heart", :color => "#fbc547", :height => 22 }) %>
 
       Empathy
     </h2>
 
     <h2 class="main-header">
-      <%= 
-        browser = Octicons::Octicon.new("alert", { :height => 22, :fill => '#47525c' })
-        browser.to_svg
-      %>
+      <%= partial(:octicon, :locals => { :octicon_name => "alert", :color => "#47525c", :height => 22 }) %>
 
       Disclamer
     </h2>
@@ -78,10 +57,7 @@ title: Better Code Reviews
 
 
 
-
-
   <hr/>
-
 
   <div class="typeform-flex-container">
     <div class="typeform-item">
