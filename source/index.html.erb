@@ -16,11 +16,46 @@ title: Better Code Reviews
   <p class="header-description">I asked some developers, and here's what I learned.</p>
 
   <div class="content-container">
-    <h2 class="section-header"> 
-      <%= partial(:octicon, :locals => { :octicon_name => "sync", :color => "#fbc547", :height => 22 }) %>
+    <div class="section">
+      <h2 class="section-header">
+        <%= partial(:octicon, :locals => { :octicon_name => "sync", :color => "#fbc547", :height => 22 }) %>
+        
+        Feedback
+      </h2>
+
+      <div>
+        <div class="icon">
+          <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+        </div>
+
+        <p class="quote">There have been times when the same code has been reviewed differently depending on who submits the PR.</p>
+
+        <br>
+        <p>Out of 507 total survey responses, 25 of them used the word <strong class="highlight">nitpick</strong>&mdash;in a negative context. That's 5% of all respondants who associated code reviews with the word <i>nitpick</i>.</p>
+
+        <br>
+
+        <p class="quote">There have been times when the same code has been reviewed differently depending on who submits the PR.</p>
+      </div>
+
+      <p class="quote">The git diff is too big to quickly understand.</p>
+
+      <p class="quote">Commits are too big, so PR's take long to review. People don't check out the branch locally to test.</p>
+
+      <p class="quote">There's some of trolling of code, and we avoid implementing a code of conduct.</p>
+
+      <p class="quote">There is no real standardization of what is required in code review. Often, people will flip and publicly berate another developer without reading a developer's notes, case, or speaking with the developer.</p>
+
+      <p class="quote">They can sometimes inspire pickiness over irrelevant details as a way of showing off the reviewer's skills.</p>
+
+      <p class="quote">They can feel sterile or (at worst) mean-spirited, even when they're not. Raising concerns and questions about code over comments alone can be tough.</p>
+
+      <p class="quote">It's just me and another person. I'm worried I don't get enough various view points on my PR's.</p>
+
+     
       
-      Feedback
-    </h2>
+    </div>
+    
 
     <h2 class="section-header">
       <%= partial(:octicon, :locals => { :octicon_name => "hubot", :color => "#fbc547", :height => 22 }) %>
@@ -47,7 +82,7 @@ title: Better Code Reviews
     </h2>
 
     <h2 class="main-header">
-      <%= partial(:octicon, :locals => { :octicon_name => "alert", :color => "#47525c", :height => 22 }) %>
+      <%= partial(:octicon, :locals => { :octicon_name => "alert", :color => "#fbc547", :height => 22 }) %>
 
       Disclamer
     </h2>
@@ -59,14 +94,6 @@ title: Better Code Reviews
 
   <hr/>
 
-  <div class="typeform-flex-container">
-    <div class="typeform-item">
-      <a class="typeform-share button" href="https://vaidehi.typeform.com/report/tl7MX5/I4Jm" data-mode="popup" data-hide-headers=true data-hide-footer=true style="display:inline-block;text-decoration:none;background-color:#fbc547;color:white;cursor:pointer;font-family:Helvetica, Arial, sans-serif;font-size:24px;line-height:60px;text-align:center;margin:0;height:60px;padding:0px 40px;border-radius:9px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank" >View results</a> <script> (function() { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://s3-eu-west-1.amazonaws.com/share.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "share.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() </script>
-    </div>
-
-    <div class="typeform-item">
-      <a class="typeform-share button" href="https://vaidehi.typeform.com/to/tl7MX5" data-mode="popup" data-hide-headers=true data-hide-footer=true style="display:inline-block;text-decoration:none;background-color:#fbc547;color:white;cursor:pointer;font-family:Helvetica, Arial, sans-serif;font-size:24px;line-height:60px;text-align:center;margin:0;height:60px;padding:0px 40px;border-radius:9px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank" >Add to the survey</a> <script> (function() { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://s3-eu-west-1.amazonaws.com/share.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "share.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() </script>
-    </div>
-  </div>
+  <%= partial(:typeform_buttons) %>
 
 </div>

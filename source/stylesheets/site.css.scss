@@ -1,6 +1,6 @@
 body {
   background-color: #ffffff;
-  color: #333;
+  color: #47525c;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
@@ -64,7 +64,27 @@ a {
 
 .section-header {
   font-family: Helvetica;
+  color: #47525c;
+}
+
+p {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.quote {
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+.highlight {
   color: #fbc547;
+}
+
+.icon {
+  float: left;
+  padding-right: 10px;
 }
 
 .chart {
