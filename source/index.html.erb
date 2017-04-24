@@ -13,36 +13,37 @@ title: Better Code Reviews
     <strong>So&mdash;what makes a good code review?</strong>
   </p>
 
-  <p class="header-description">I asked some developers, and here's what I learned.</p>
+  <p class="header-description">
+    I asked some developers, and here's what I learned.<a href="#disclaimer" class="disclaimer"><strong class="highlight">*</strong></a>
+  </p>
 
   <div class="content-container">
+    <div class="section">
+      <p class="header-subtitle">
+        <strong>Overarching Themes</strong>
+      </p>
+    </div>
+
     <div class="section">
       <h2 class="section-header">
         <%= partial(:octicon, :locals => { :octicon_name => "sync", :color => "#fbc547", :height => 22 }) %>
         
-        Feedback
+        LGTM
       </h2>
 
-      <div>
-        <div class="icon">
-          <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
-        </div>
-
-        <p class="quote">There have been times when the same code has been reviewed differently depending on who submits the PR.</p>
-
-        <br>
-        <p>Out of 507 total survey responses, 25 of them used the word <strong class="highlight">nitpick</strong>&mdash;in a negative context. That's 5% of all respondants who associated code reviews with the word <i>nitpick</i>.</p>
-
-        <br>
-
-        <p class="quote">There have been times when the same code has been reviewed differently depending on who submits the PR.</p>
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
       </div>
 
-      <p class="quote">The git diff is too big to quickly understand.</p>
+      <p class="quote">We have one dev who just blindly thumbs-up every PR and rarely leaves comments. That person is attempting to game the rule of “at least two approvals”. It is easy to tell, because inside of one minute they will suddenly have approved 5–6 PRs. I would fire this person for this alone were it in my power.</p>
 
-      <p class="quote">Commits are too big, so PR's take long to review. People don't check out the branch locally to test.</p>
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
 
-      <p class="quote">There's some of trolling of code, and we avoid implementing a code of conduct.</p>
+      <p class="quote">I find that the 2nd or 3rd reviewer is often more likely to rubber stamp after seeing one approval. Perhaps blind reviews (minus comments left?) could be helpful?</p>
+
+      <!-- <p class="quote">There's some of trolling of code, and we avoid implementing a code of conduct.</p>
 
       <p class="quote">There is no real standardization of what is required in code review. Often, people will flip and publicly berate another developer without reading a developer's notes, case, or speaking with the developer.</p>
 
@@ -50,64 +51,253 @@ title: Better Code Reviews
 
       <p class="quote">They can feel sterile or (at worst) mean-spirited, even when they're not. Raising concerns and questions about code over comments alone can be tough.</p>
 
-      <p class="quote">It's just me and another person. I'm worried I don't get enough various view points on my PR's.</p>
-
-     
-      
+      <p class="quote">Code reviews work best when everyone is already pulling in the same direction, wants one another to succeed, and everyone is subject to the same rules. They go bad when submitters push bad code expecting it to be fixed in review. They go bad when reviewers demand changes to non-broken code just because it wasn’t written how they personally would have done it. They go bad when there are multiple reviewers coming in at different times, requiring many re-submissions. They go bad when one reviewer leaves some comments, and then leaves some completely unrelated comments only after the first lot were already addressed. They go bad when people aren’t nice to each other.</p> -->
     </div>
     
+    <div class="section">
+      <h2 class="section-header">
+        <%= partial(:octicon, :locals => { :octicon_name => "clock", :color => "#fbc547", :height => 22 }) %>
+        
+        Energy
+      </h2>
 
-    <h2 class="section-header">
-      <%= partial(:octicon, :locals => { :octicon_name => "hubot", :color => "#fbc547", :height => 22 }) %>
-      
-      Everyone
-    </h2>
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+      <p class="quote">The git diff is too big to quickly understand.</p>
 
-    <h2 class="section-header">
-      <%= partial(:octicon, :locals => { :octicon_name => "comment-discussion", :color => "#fbc547", :height => 22 }) %>
-      
-      Comments
-    </h2>
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+      <p class="quote">Commits are too big, so PR's take long to review. People don't check out the branch locally to test.</p>
 
-    <h2 class="section-header">
-      <%= partial(:octicon, :locals => { :octicon_name => "law", :color => "#fbc547", :height => 22 }) %>
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
 
-      Ego
-    </h2>
+      <p class="quote">Especially long PR’s take longer to be reviewed, which is an issue because they have the most effect on future branches/PRs/merges.</p>
+    </div>
 
-    <h2 class="section-header">
-      <%= partial(:octicon, :locals => { :octicon_name => "heart", :color => "#fbc547", :height => 22 }) %>
+    <div class="section">
+      <h2 class="section-header">
+        <%= partial(:octicon, :locals => { :octicon_name => "hubot", :color => "#fbc547", :height => 22 }) %>
+        
+        Everyone Reviewing, Equally
+      </h2>
 
-      Empathy
-    </h2>
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
 
-    <h2 class="main-header">
-      <%= partial(:octicon, :locals => { :octicon_name => "alert", :color => "#fbc547", :height => 22 }) %>
+      <p class="quote">There have been times when the same code has been reviewed differently depending on who submits the PR.</p>
 
-      Disclamer
-    </h2>
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
 
-    <div id="language_chart_div" class="chart"></div>
+      <p class="quote">Everyone on the team should receive equal review. I feel like it’s so common for senior people to get no feedback because people assume they can do no wrong but they totally can, and might want feedback. And junior people get nit picked to death… remember people’s self esteem is likely to be affected and they’re being vulnerable.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">Code reviews need to be acknowledged as a first class citizen in a development team and a legitimate activity that needs time and focus.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">Everyone on the team should receive equal review. I feel like it’s so common for senior people to get no feedback because people assume they can do no wrong but they totally can, and might want feedback. And junior people get nit picked to death… remember people’s self esteem is likely to be affected and they’re being vulnerable.</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-header">
+        <%= partial(:octicon, :locals => { :octicon_name => "comment-discussion", :color => "#fbc547", :height => 22 }) %>
+        
+        Comments
+      </h2>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "graph", :color => "#fbc547", :height => 15 }) %>
+      </div>
+      <p>Out of 507 total survey responses, 5% of them used the word <strong class="highlight">nitpick</strong>&mdash;to describe code review comments in a negative context.</p>
+      <br>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">I take any feedback on PR's at face value. If changing that string to a symbol will make you happy, let’s do that and move on. I’m not going to try and justify an arbitrary decision. It’s not unlike working in an IDE environment, it’s very easy for my brain to fall into a “see red squiggle, fix red squiggle” mindset. I don’t really care why it’s upset, just make it stop yelling at me.<br><br> This makes me sad. The best parts of any system I’ve worked on were the result of someone questioning an assumption and starting a conversation. Face-to-face this takes minutes from thought to alternative implementation. But with a PR, I don’t know if you agree with me in the first place, so I don’t know if I should build on that thought. And if we start a back-and-forth — I start to get antsy about getting to “done”.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">People need to do better jobs distinguishing between their own stylistic preferences and feedback that makes a functional difference. It can be tough for a more junior person to figure out which is which. It’s also frustrating when multiple seniors give conflicting feedback (e.g. What to call a route and why).</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">Do not do big picture or architectural critiques in a review. Have offline conversations. Too easy to send folks down a rabbit hole and create frustration.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">If I ever find myself going back and forth on something via comments, I’ll ping the other person and ask them to pair. Sometimes it’s hard to just talk to someone.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">If a comment thread is getting long, it’s an indication a verbal conversation should be had (report the consensus back in the comment thread)</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">[Avoid] unnecessary comments on coding paradigms like how the same code could be written in less number of lInes if functional style was used.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">It can be difficult to gauge the appropriate level of brutality in a comment. I don’t want to blow minor nitpicks out of proportion, and I don’t want to put the submitter on the defensive even when something’s badly wrong since that makes it harder to actually get the job done.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">I feel pretty strongly that it’s annoying when people demand changes, especially if they don’t take the time to explain why they’re doing so, or leave room for the possibility that they’re wrong. Especially when people just rewrite your code in a comment and tell you to change to their version.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">One problem we have is that we want to be rigorous about things like coding standards, but it becomes frustrating for the author of a patch if they have to change too many things. Most of the time it’s easier to mention a few of the most important fixes for one review, and fix the other things later. Most of our disagreements during code reviews are about how to name things.</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-header">
+        <%= partial(:octicon, :locals => { :octicon_name => "heart", :color => "#fbc547", :height => 22 }) %>
+
+        Ego vs. Empathy
+      </h2>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">They can feel sterile or (at worst) mean-spirited, even when they’re not. Raising concerns and questions about code over comments alone can be tough.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">Always assume best intentions and intelligence of the person you’re reviewing. Offer suggestions and ask questions when you disagree with the approach. Emojis help keep the comments friendly.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">The can sometimes inspire pickiness over irrelevant details as a way of showing off the reviewer’s skills.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">There's no real standardization of what is required in code review. Often people will flip and publicly berate another developer without reading developers notes, case, or speaking with developer.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">Review the code, not the person. Let tools handle styling changes for you so you don’t spend time with this in code reviews</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">There's some of trolling of code, [and] we [have] avoid implementing a code of conduct.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">Leave your ego at the door. All feedback is good feedback. Consider your future maintenance selves.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+
+      <p class="quote">It’s good to be humble and receive feedback well, but it’s bad to let interpersonal toxicity seep into code review.</p>
+
+      <div class="icon">
+        <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
+      </div>
+      <p class="quote">Code reviews work best when everyone is already pulling in the same direction, wants one another to succeed, and everyone is subject to the same rules. They go bad when submitters push bad code expecting it to be fixed in review. They go bad when reviewers demand changes to non-broken code just because it wasn’t written how they personally would have done it. They go bad when there are multiple reviewers coming in at different times, requiring many re-submissions. They go bad when one reviewer leaves some comments, and then leaves some completely unrelated comments only after the first lot were already addressed. They go bad when people aren’t nice to each other.</p>
+    </div>
+
+    <div class="section">
+      <p class="header-subtitle">
+        <strong>The Data</strong>
+      </p>
+    </div>
+
+    <div class="graph-analysis-item">
+      <p>The developers who responded to my survey primarily work with Java, Ruby, and JavaScript.</p>
+
+      <div id="language_chart_div" class="chart"></div>
+    </div>
+    
+    <div class="graph-analysis-item">
+      <p class="graph-analysis-description">Swift developers find code reviews the most beneficial to their teams. Ruby developers come in a close second, averaging about 9.2 on a scale of 1–10, where 1 is <em>strongly disagree</em>, and 10 is <em>strongly agree</em>.</p>
+
+      <div class="image-wrapper">
+        <img src="images/benefits_by_language.jpg" class="graph" />
+      </div>
+    </div>
+
+    <div class="graph-analysis-item">
+      <p class="graph-analysis-description">Approximately 10% (50 respondents) of developers stated that that pull requests are only peer reviewed in their teams when a review is requested. In comparison, 70% (350 respondents) of developers stated that all pull requests were reviewed.</p>
+
+      <div class="image-wrapper">
+        <img src="images/pull_review_overall.jpg" class="graph" />
+      </div>
+    </div>
+
+    <div class="graph-analysis-item">
+      <p class="graph-analysis-description">The data seems to suggest that this distribution, for the most part, carries across languages and frameworks. That is to say, no one language seems to have an overwhelmingly different result.</p>
+
+      <div class="image-wrapper">
+        <img src="images/pull_review_by_language.jpg" class="graph" />
+      </div>
+
+      <p class="graph-analysis-description">You can view even more raw data by clicking on the <strong class="highlight">view results</strong> button at the bottom of the page.</p>
+    </div>
 
     <hr/>
 
     <div>
-      <h2 class="section-header">Contribute</h2>
-      <p>Want to help out with this project? Awesome!</p><br>
-      
-      <p>If you only have a few minutes to contribute, you can help me out by adding to my dataset! Fill out the survey by clicking on the <strong class="highlight">add to survey</strong> button below.</p>
+      <h2 class="section-header">Contribute</h2>      
+      <p>If you only have a few minutes to contribute, you can help by adding to the dataset! Fill out the survey by clicking on the <strong class="highlight">add to survey</strong> button below.</p>
       <br>
 
-      <p>If you have some more time to help, I'm always looking for data scientists and developers to help me analyze all this data!</p>
+      <p>If you have some more time on hand, I'm looking for data scientists and developers to help me analyze all this data!</p>
       <br>
 
-      <p>You can get started by checking out the current dataset and clicking on the  <strong class="highlight">view results</strong> button below. Then head over to the <a href="https://github.com/vaidehijoshi/better-code-reviews">Github repo</a> and file an issue for what you'd like to work on&mdash;or pick up an issue that's already there!</p>
+      <p>You can get started by checking out the current dataset and clicking on the <strong class="highlight">view results</strong> button below. Head over to the <a href="https://github.com/vaidehijoshi/better-code-reviews">Github repo</a> and file an issue for what you'd like to work on&mdash;or pick up an issue that's already there!</p>
       <br>
 
-      <p>Have something else in mind? Find me on <a href="https://www.twitter.com/vaidehijoshi">Twitter</a>, and let's chat more about how you can help.</p>
+      <p>Have something else in mind? Ping me on <a href="https://www.twitter.com/vaidehijoshi">Twitter</a>, and let's chat more about how you can get involved.</p>
       <br>
 
       <%= partial(:typeform_buttons) %>
+
+      <br><br>
+
+      <p><a name="disclaimer"><strong class="highlight">*</strong></a>Please be aware that this dataset is <strong class="highlight">very limited</strong>. I'm working under the constraints that survey respondents were self-selecting. The total number of survey respondents (507) is not an accurate representation of the developer community as a whole, but rather, a very small subset. <strong class="highlight centered">tl;dr</strong>&mdash;I'm not a data scientist!</p>
     </div>
   </div>
 </div>
