@@ -28,8 +28,10 @@ title: Better Code Reviews
       <h2 class="section-header">
         <%= partial(:octicon, :locals => { :octicon_name => "sync", :color => "#fbc547", :height => 22 }) %>
         
-        LGTM
+        LGTM 👍
       </h2>
+
+       <p class="theme-description">No one feels good about a code review process that's just a formality & doesn't carry any weight.</p>
 
       <div class="icon">
         <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
@@ -42,16 +44,6 @@ title: Better Code Reviews
       </div>
 
       <p class="quote">I find that the 2nd or 3rd reviewer is often more likely to rubber stamp after seeing one approval. Perhaps blind reviews (minus comments left?) could be helpful?</p>
-
-      <!-- <p class="quote">There's some of trolling of code, and we avoid implementing a code of conduct.</p>
-
-      <p class="quote">There is no real standardization of what is required in code review. Often, people will flip and publicly berate another developer without reading a developer's notes, case, or speaking with the developer.</p>
-
-      <p class="quote">They can sometimes inspire pickiness over irrelevant details as a way of showing off the reviewer's skills.</p>
-
-      <p class="quote">They can feel sterile or (at worst) mean-spirited, even when they're not. Raising concerns and questions about code over comments alone can be tough.</p>
-
-      <p class="quote">Code reviews work best when everyone is already pulling in the same direction, wants one another to succeed, and everyone is subject to the same rules. They go bad when submitters push bad code expecting it to be fixed in review. They go bad when reviewers demand changes to non-broken code just because it wasn’t written how they personally would have done it. They go bad when there are multiple reviewers coming in at different times, requiring many re-submissions. They go bad when one reviewer leaves some comments, and then leaves some completely unrelated comments only after the first lot were already addressed. They go bad when people aren’t nice to each other.</p> -->
     </div>
     
     <div class="section">
@@ -60,6 +52,8 @@ title: Better Code Reviews
         
         Energy
       </h2>
+
+      <p class="theme-description">It's not fun to review a long PR with code that you're unfamiliar with, or have no context for.</p>
 
       <div class="icon">
         <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
@@ -82,8 +76,10 @@ title: Better Code Reviews
       <h2 class="section-header">
         <%= partial(:octicon, :locals => { :octicon_name => "hubot", :color => "#fbc547", :height => 22 }) %>
         
-        Everyone Reviewing, Equally
+        Equal Reviews
       </h2>
+
+      <p class="theme-description">To err is human, and we're all human. We should all be reviewed, and be review others fairly.</p>
 
       <div class="icon">
         <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
@@ -116,6 +112,8 @@ title: Better Code Reviews
         
         Comments
       </h2>
+
+      <p class="theme-description">Comments nitpicking purely at syntax lead to a negative experience. Style and semantics are not the same thing.</p>
 
       <div class="icon">
         <%= partial(:octicon, :locals => { :octicon_name => "graph", :color => "#fbc547", :height => 15 }) %>
@@ -185,6 +183,8 @@ title: Better Code Reviews
         Ego vs. Empathy
       </h2>
 
+      <p class="theme-description">The words we use to review one another's code really do matter. An unkind  review can break someone's self-confidence.</p>
+
       <div class="icon">
         <%= partial(:octicon, :locals => { :octicon_name => "quote", :color => "#fbc547", :height => 15 }) %>
       </div>
@@ -243,13 +243,13 @@ title: Better Code Reviews
       <p class="header-subtitle">
         <strong>The Data</strong>
       </p>
+
+      <p>The developers who responded to the survey primarily work with Java, Ruby, and JavaScript.</p>
     </div>
 
     <div id="language_chart_div" class="chart"></div>
     
     <div class="graph-analysis-item">
-      <p>The developers who responded to my survey primarily work with Java, Ruby, and JavaScript.</p>
-
       <p class="graph-analysis-description">Swift developers find code reviews the most beneficial to their teams. Ruby developers come in a close second, averaging about 9.2 on a scale of 1–10, where 1 is <em>strongly disagree</em>, and 10 is <em>strongly agree</em>.</p>
 
       <div class="image-wrapper">

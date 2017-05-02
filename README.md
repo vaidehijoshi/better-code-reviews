@@ -8,8 +8,8 @@ There's a lot of questions still to be answered and data that needs to be collec
 Here is a rough set of TODOs/questions that would be nice to answer:
 
 - [ ] Do years of experience and opinions on code reviews have any correlation?
-- [ ] Do programmers working in a particular language/framework spend more time on code reviews than others?
-- [ ] Do programmers working in a particular language/framework require more reviewers than others?
+- [ ] Do programmers working in a particular language/framework spend more time reviewing than others?
+- [ ] Do programmers working in a particular language/framework wait for peer review than others?
 - [ ] Do programmers working in a particular language/framework require more reviewers before merging a PR than others?
 - [ ] What percentage of programmers do *not* use a Github-based pull request + review system?
 - [ ] How much time, on average, do junior or entry-level developers spend reviewing a pull request? How much time do senior developers spend?
